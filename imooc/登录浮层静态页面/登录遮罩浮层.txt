@@ -1,0 +1,6 @@
+1.登录遮罩要设置透明度
+（1）opacity及兼容IE低版本的filter
+（2）防止鼠标选中事件的处理代码
+	onselectstart
+	https://developer.mozilla.org/zh-CN/docs/Web/API/GlobalEventHandlers/onselectstart
+ (3)可视区域宽高等，元素的高、宽

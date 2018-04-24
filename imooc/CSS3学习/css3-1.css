@@ -1,0 +1,166 @@
+
+body{
+    background:#fff;
+}
+div{
+    margin-bottom: 10px;
+    margin-top:10px;
+    border: 1px solid #000;
+}
+
+/* border-radius */
+/* border-radius */
+/*     
+实心圆：
+方法：把宽度（width）与高度(height)值设置为一致（也就是正方形），并且四个圆角值都设置为它们值的一半。如下代码：
+*/
+div.one{
+    height:100px;/*与width设置一致*/
+    width:100px;
+    background:#9da;
+    border-radius:50px;/*四个圆角值都设置为宽度或高度值的一半*/
+}
+/*
+实心上半圆：
+方法：把高度(height)设为宽度（width）的一半，并且只设置左上角和右上角的半径与元素的高度一致（大于也是可以的）。 
+*/
+div.two{
+    height:50px;/*是width的一半*/
+    width:100px;
+    background:#9da;
+    border-radius:50px 50px 0px 0px;/*半径至少设置为height的值*/
+}
+/*
+ 实心下半圆
+*/
+div.three{
+    height:50px;/*是width的一半*/
+    width:100px;
+    background:#9da;
+    border-radius:0px 0px 50px 50px;/*半径至少设置为height的值*/
+}
+div.four{
+    height: 100px;
+    width: 50px;
+    background: #9da;
+    border-radius: 50px 0px 0px 50px;
+}
+div.five{
+    height: 100px;
+    width: 50px;
+    background: #9da;
+    border-radius: 0px 50px 50px 0px;
+}
+
+/*box-shadow*/
+/*box-shadow*/
+/* 
+1、阴影模糊半径与阴影扩展半径的区别
+阴影模糊半径：此参数可选，其值只能是为正值，如果其值为0时，表示阴影不具有模糊效果，其值越大阴影的边缘就越模糊；
+阴影扩展半径：此参数可选，其值可以是正负值，如果值为正，则整个阴影都延展扩大，反之值为负值时，则缩小；
+2、X轴偏移量和Y轴偏移量值可以设置为负数
+box-shadow: X轴偏移量 Y轴偏移量 [阴影模糊半径] [阴影扩展半径] [阴影颜色] [投影方式]; 
+3.左负右正，上负下正
+*/
+.boxshadow{
+    width:100px;
+    height:100px;
+    box-shadow: 4px 4px 6px 1px #666,10px 10px 50px 10px #888 inset; 
+    border-radius:50px;
+}
+
+/* border-image */
+/* border-image */
+#border_image {
+    margin:0 auto;
+	height:100px;
+	line-height:100px;
+	text-align:center;
+	font-size:30px;
+	width:450px;
+	border:15px solid #ccc;
+    border-image:url(http://img.mukewang.com/52e22a1c0001406e03040221.jpg) 15  repeat;
+}
+
+/*RGBA*/
+/*RGBA*/
+.rgba{
+    width:300px;
+    height:200px;
+    background:#666;
+}
+.rgba p{
+    font-size:42px;
+    text-align:center;
+    font-weight:bold;
+    background:rgba(255,255,255,0.5);
+} 
+
+/*text-overflow/word-wrap*/
+/*text-overflow/word-wrap*/
+
+.text-overflow{
+    text-overflow:ellipsis; 
+    overflow:hidden; 
+    white-space:nowrap; 
+    width:200px; 
+    background:#ccc;
+}
+
+/* 
+word-wrap和 word-break
+http://www.cnblogs.com/2050/archive/2012/08/10/2632256.html 
+*/
+ 
+/* @font-face */
+/* @font-face */
+/*
+    本地css中的font-family的值必须设置为@font-face中font-family同样的值
+*/
+@font-face {
+    font-family: "MOOC Font";
+    src: url("http://www.imooc.com/Amaranth-BoldItalic.otf");
+}
+
+.font-face {
+    width: 340px;
+    padding: 30px;    
+    color: #566F89;
+    background: #000;
+    font-size:58px;
+    font-family: "MOOC Font";
+}
+
+/* text-shadow */
+/* text-shadow */
+/* 
+X-Offset：表示阴影的水平偏移距离，其值为正值时阴影向右偏移，反之向左偏移；      
+Y-Offset：是指阴影的垂直偏移距离，如果其值是正值时，阴影向下偏移，反之向上偏移；
+Blur：是指阴影的模糊程度，其值不能是负值，如果值越大，阴影越模糊，反之阴影越清晰，如果不需要阴影模糊可以将Blur值设置为0；
+Color：是指阴影的颜色，其可以使用rgba色。 
+*/
+
+/* 结构性伪类选择器—root */
+/* 结构性伪类选择器—root */
+/* 
+“:root”选择器等同于<html>元素，简单点说：
+:root{background:orange}
+html {background:orange;}
+ */
+:root div.test{
+    width: 300px;
+    height: 100px;
+    background:gray;
+}
+
+/* 结构性伪类选择器—empty */
+/* 结构性伪类选择器—empty */
+/* 
+    :empty选择器表示的就是空。用来选择没有任何内容的元素，这里没有内容指的是一点内容都没有，哪怕是一个空格。 
+*/
+
+div:empty {
+    width:100px;
+    height: 100px;
+    background: green;
+}

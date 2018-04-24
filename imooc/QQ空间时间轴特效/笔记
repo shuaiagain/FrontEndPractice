@@ -1,0 +1,27 @@
+1.数组添加元素的方法的区别
+push
+unshift
+
+2.offsetTop,offsetWidth的意思
+3.scrollTop
+left=(get_body_width -960/2)
+
+4. 
+（1）window.onscroll=function(){
+
+}
+（2）className获取元素序列兼容性问题
+
+5.页面当前滚动条的高度
+6.任务
+1、尝试使用CSS写出四个方向的三角形的箭头
+
+2、尝试在一个较长的文章页（自定义一个高度为2000px的div来模拟）中，当滚动过了超过500 像素时，出现一个浮动图标，来使页面滚动到顶部。
+
+
+7.rgba
+此色彩模式与RGB相同，只是在RGB模式上新增了Alpha透明度。
+IE6.0-8.0不支持使用 rgba 模式实现透明度，可使用 IE 滤镜处理，如：
+示例代码：
+
+filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#88000000, endColorstr=#88000000);

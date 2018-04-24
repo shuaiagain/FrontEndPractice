@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>QQ空间-时光轴效果</title>
+</head>
+<style type="text/css">
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    body {
+        background: #1c0c0f url(./images/1.jpg) center 0 no-repeat;
+    }
+    
+    .top {
+        width: 100%;
+        height: 40px;
+        background-color: #001f3b;
+    }
+    
+    .header {
+        width: 960px;
+        height: 200px;
+        background-color: rgba(255, 255, 255, 0.2);
+        margin: 0 auto;
+    }
+    
+    .container {
+        width: 960px;
+        min-width: 960px;
+        margin: 0 auto;
+        position: relative;
+    }
+    
+    .scrubber {
+        position: absolute;
+        top: 29px;
+        left: 0px;
+        width: 47px;
+        z-index: 100;
+    }
+    
+    .scrubber a {
+        text-decoration: none;
+        font-size: 12px;
+        text-align: right;
+        color: #a5a5a5;
+        padding-right: 5px;
+        border-right: 2px solid #ffb;
+        border-right-color: rgba(200, 200, 200, .5);
+        text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+        display: inline-block;
+        height: 26px;
+        line-height: 26px;
+        font-weight: bold;
+    }
+    
+    .scrubber a:hover {
+        color: #7ebad0;
+        text-decoration: underline;
+        border-right-color: #7ebad0;
+        font-weight: bold;
+    }
+    
+    .content {
+        min-height: 1000px;
+        background: url(./images/spine.png) repeat-y 121px 0px;
+        position: relative;
+        padding-top: 28px;
+        padding-left: 69px;
+    }
+    
+    .content .c-year {
+        color: #a5a5a5;
+        line-height: 30px;
+        height: 30px;
+    }
+</style>
+
+<body>
+    <div class="top"></div>
+    <div class="header"></div>
+    <div class="container">
+        <div class="scrubber" id="scrubber">
+            <a href="javascript:void(0);">
+             2014
+            </a>
+            <a href="javascript:void(0);">
+             2013
+            </a>
+            <a href="javascript:void(0);">
+             2012
+            </a>
+        </div>
+        <div class="content">
+            <div class="c-year">2014</div>
+
+            <div class="c-item">
+
+                <div class="c-icon-arrow"></div>
+                <div class="c-icon-dot">
+                    <div class="icon-child"></div>
+                </div>
+
+                <div class="c-item-head">
+
+                    <div class="head-title">
+                        <div class="head-title-icon">初<br>&nbsp;&nbsp;&nbsp;一</div>
+                        2014-3-31
+                    </div>
+                    <div class="head-intro">
+                        <i class="ui-ico quote-before"></i> 在这春林初盛，草长莺飞的日子，QQ空间愿你关掉电脑，放下手机，与三五好友相约青山绿水中，感受春天带来的勃勃生机···
+                        <i class="ui-ico quote-after"></i>
+                    </div>
+                </div>
+                <div class="c-media">
+                    <img src="images/psb.jpeg" width="370">
+                </div>
+                <div class="c-footer">
+                    <div class="c-footer-info">
+                        <a href="javascript:void(0)" class="op-zan" title="赞">
+                            <i class="ui-ico ico-zan">赞</i>(302)</a>
+                        <a href="javascript:void(0)" class="op-pin" title="评论">
+                            <i class="ui-ico ico-com">评论</i>(883)</a>
+                    </div>
+                    <div class="c-footer-like">
+                        302人觉得很赞
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    </script>
+
+</body>
+
+</html>
