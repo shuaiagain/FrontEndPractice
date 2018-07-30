@@ -100,3 +100,49 @@ margin:auto;
     margin: 0 auto;
     width: 270px;
 }
+
+.search {
+    text-align: center;
+    font-size: 0px;
+    position: relative;
+}
+
+.search .search-wrap {
+    display: inline-block;
+    position: relative;
+    border: 1px solid #ccc;
+}
+
+.search .search-wrap .search-key {
+    height: 36px;
+    line-height: 36px;
+    width: 500px;
+    outline: none;
+    border: 0;
+    border-right: none;
+    margin-left: 7px;
+}
+
+.search .search-wrap .search-pic {
+    display: inline-block;
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    vertical-align: bottom;
+    background: url(../images/camera.png) no-repeat;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.search .search-btn {
+    font-size: 14px;
+    display: inline-block;
+    height: 36px;
+    line-height: 36px;
+    border: 1px solid #38f;
+    padding: 0px 20px;
+    background: #38f;
+    color: #fff;
+    vertical-align: bottom;
+}

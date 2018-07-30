@@ -5,7 +5,8 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./iconfont/iconfont.css" />
-    <link rel="stylesheet" href="./css/one.css" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <script type="text/javascript" src="./"></script>
 </head>
 
 <body>
@@ -39,16 +40,18 @@
         </div>
         <div class="main">
             <div class="theme">
-                <img class="theme-today" src="./images/sun.png"/>
+                <img class="theme-today" src="./images/baidu.png" />
             </div>
             <div class="search">
-                <input type="text" value="" />
-                <a>百度一下</a>
+                <span class="search-wrap">
+                    <input type="text" value="" placeholder="" class="search-key" autocomplete="off" />
+                    <span class="search-pic"></span>
+                </span>
+                <a class="search-btn">百度一下</a>
             </div>
             <div class="tab"></div>
         </div>
         <div class="footer">
-
         </div>
     </div>
 </body>
