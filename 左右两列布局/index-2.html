@@ -1,0 +1,67 @@
+<DOCTYPE html />
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <style type="text/css">
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .clearfix:after {
+            content: ".";
+            display: block;
+            height: 0;
+            visibility: hidden;
+            clear: left;
+        }
+        /* 兼容ie6/i7 */
+        .clearfix{
+            zoom: 1;
+        }
+
+        .floatL {
+            float: left;
+            height: 100px;
+            width: 100px;
+            background: #060;
+            margin: 1px;
+        }
+
+        .floatR {
+            float: right;
+            height: 100px;
+            width: 100px;
+            background: #060;
+        }
+
+        .parent {
+            border: 1px solid #bbb;
+        }
+
+        a::before {
+            content: "→";
+        }
+
+        a::after {
+            content: "→";
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wraper">
+        <div class="parent clearfix">
+            <div class="floatL"></div>
+            <div class="floatL"></div>
+            <div class="floatL"></div>
+            <!-- <div class="clear"></div> -->
+        </div>
+        <div>
+            <a>1111</a>
+        </div>
+    </div>
+</body>
+
+</html>
