@@ -1,23 +1,62 @@
 $(function () {
 
+    $('.left .item').siblings('ul').slideUp();
     $('.left .item').on('click', function (e) {
-        debugger;
+
         var item = $(this);
-        if (item.hasClass('active-item')) {
-            $('.left .item').removeClass('active-item');
-            item.siblings('ul').animate({ height: '0px' }, function () {
+        var siblings = item.siblings('ul');
+        var hasParent = item.parents('ul').siblings('.item').length;
 
-                $(this).hide();
-            });
+        if (item.hasClass('open') && !hasParent) {
 
-            item.siblings('ul').slideUp();
-        } else {
+            item.removeClass('open');
+            siblings.slideUp();
+        } else if (!item.hasClass('open') && !hasParent) {
 
-            $('.left .item').removeClass('active-item');
-            item.addClass('active-item open');
-            item.siblings('ul').slideDown();
+            $('.open').siblings('ul').slideUp();
+            $('.open').removeClass('open');
+
+            item.addClass('open');
+            siblings.slideDown();
+        }
+        else if (!item.hasClass('active-item') && hasParent) {
+
+            $('.active-item').removeClass('active-item');
+            item.addClass('active-item');
+            getData();
         }
 
+        e.preventDefault();
+        e.stopPropagation();
     });
+
+    function getData() {
+
+        $.ajax({
+            type: 'get',
+            url: 'http://localhost:8282/api/article/GetArticleList',
+            data: {},
+            contentType: 'application/json;charset=utf-8',
+            beforeSend: function () {
+
+                $('.loading').show();
+            },
+            success: function (data) {
+
+                var a = '';
+                for (var i = 0; i < 10000; i++) {
+                    a += i;
+                }
+
+                $('.right-content').html(a);
+            },
+            complete: function () {
+                setTimeout(() => {
+                    $('.loading').hide();
+                }, 1000);
+            }
+        });
+    }
+
 
 });
