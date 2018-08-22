@@ -52,7 +52,7 @@
     height: 100%;
     background: #fafafa;
     opacity: 0.8;
-    filter: Alpha(opacity=40);
+    filter: Alpha(opacity=80);
     text-align: center;
     display: none;
 }
@@ -63,12 +63,13 @@
     height: 40px;
     top: 42%;
     left: 53%;
-    /* border: 1px solid #000; */
-    border: 2px #2486ff solid;
+   
+    /* border: 2px #2486ff solid;
     border-left-color: #fff;
     border-right-color: #2486ff;
     border-radius: 50%;
-    animation: loading 1s infinite linear;
+    animation: loading 1s infinite linear; */
+    background: url(../images/loading.gif) no-repeat;
 }
 
 @keyframes loading {

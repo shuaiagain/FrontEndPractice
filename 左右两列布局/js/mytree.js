@@ -60,9 +60,9 @@ $(function () {
                 $('.right-content').html(a);
             },
             complete: function () {
-                setTimeout(() => {
+                setTimeout(function () {
                     $('.loading').hide();
-                }, 300);
+                },1000);
             }
         });
     }
