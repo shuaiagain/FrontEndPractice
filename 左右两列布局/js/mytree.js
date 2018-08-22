@@ -43,10 +43,13 @@ $(function () {
             },
             success: function (data) {
 
+                var dateOne=new Date().getTime();
                 var a = '';
                 for (var i = 0; i < 10000; i++) {
                     a += i;
                 }
+
+                console.log(new Date().getTime()-dateOne)
 
                 $('.right-content').html(a);
             },
