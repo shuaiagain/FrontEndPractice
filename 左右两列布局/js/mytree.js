@@ -4,22 +4,26 @@ $(function () {
     $('.left .item').on('click', function (e) {
 
         var item = $(this);
-        var siblings = item.siblings('ul');
-        var hasParent = item.parents('ul').siblings('.item').length;
+        var son = item.siblings('ul');
+        var hasSon = son ? son.length : 0;
+        var hasParentOpen = item.parents('li').find('.open').length;
 
-        if (item.hasClass('open') && !hasParent) {
+        if (hasSon && item.hasClass('open')) {
 
             item.removeClass('open');
-            siblings.slideUp();
-        } else if (!item.hasClass('open') && !hasParent) {
+            son.slideUp();
+        } else if (!item.hasClass('open') && hasSon && hasParentOpen) {
+
+            item.addClass('open');
+            son.slideDown();
+        } else if (!item.hasClass('open') && hasSon && !hasParentOpen) {
 
             $('.open').siblings('ul').slideUp();
             $('.open').removeClass('open');
-
             item.addClass('open');
-            siblings.slideDown();
+            son.slideDown();
         }
-        else if (!item.hasClass('active-item') && hasParent) {
+        else if (!item.hasClass('active-item') && !hasSon) {
 
             $('.active-item').removeClass('active-item');
             item.addClass('active-item');
@@ -43,13 +47,13 @@ $(function () {
             },
             success: function (data) {
 
-                var dateOne=new Date().getTime();
+                var dateOne = new Date().getTime();
                 var a = '';
                 for (var i = 0; i < 10000; i++) {
                     a += i;
                 }
 
-                console.log(new Date().getTime()-dateOne)
+                console.log(new Date().getTime() - dateOne)
 
                 $('.right-content').html(a);
             },

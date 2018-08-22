@@ -37,6 +37,10 @@ li {
     padding-left: 35px;
 }
 
+.left ul li ul li ul .item {
+    padding-left: 50px;
+}
+
 .active-item {
     color: #31d462;
 }
