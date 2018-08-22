@@ -51,6 +51,8 @@ $(function () {
                 var a = '';
                 for (var i = 0; i < 10000; i++) {
                     a += i;
+                    if (i % 100 == 0 && i != 0)
+                        a += '\n';
                 }
 
                 console.log(new Date().getTime() - dateOne)
@@ -60,7 +62,7 @@ $(function () {
             complete: function () {
                 setTimeout(() => {
                     $('.loading').hide();
-                }, 1000);
+                }, 300);
             }
         });
     }

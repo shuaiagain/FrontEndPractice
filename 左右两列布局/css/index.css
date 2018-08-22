@@ -91,4 +91,6 @@ li {
 
 .right .right-content {
     height: 540px;
+    overflow: auto;
+    padding: 5px;
 }
