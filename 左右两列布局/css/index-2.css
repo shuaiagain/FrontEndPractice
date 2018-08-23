@@ -1,0 +1,127 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}
+
+ul ol,
+li {
+    list-style: none;
+}
+
+.wraper {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.left {
+    float: left;
+    width: 200px;
+    word-break: break-all;
+    color: #fff;
+    background: #545c64;
+    margin-right: 10px;
+    height: 100%;
+}
+
+.left ul li .item {
+    padding: 15px 0px 15px 20px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.left ul li .item:hover {
+    background: #2f3133;
+}
+
+.left ul li ul .item {
+    padding-left: 35px;
+}
+
+.left ul li ul li ul .item {
+    padding-left: 50px;
+}
+
+.active-item {
+    color: #31d462;
+}
+
+.right {
+    overflow: auto;
+    position: absolute;
+    right: 2px;
+    left: 204px;
+    width: auto;
+    border: 1px solid #bbb;
+    bottom: 64px;
+    top: 8px;
+}
+
+.right .right-top {
+    overflow: hidden;
+    border-bottom: 1px solid #bbb;
+    height: 40px;
+}
+
+.right .right-top .top-operate {
+    height: 40px;
+    line-height: 40px;
+}
+
+.right .right-top .add {
+    font-size: 14px;
+    padding: 3px 15px;
+    background: #bbb;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.right .right-top .top-search {
+    height: 40px;
+    line-height: 38px;
+    margin-right: 20px;
+}
+
+.right .right-top .top-search .search-key {
+    height: 29px;
+    outline: none;
+    padding-left: 2px;
+}
+
+.right .right-top .top-search .search-btn {
+    font-size: 14px;
+    padding: 3px 15px;
+    background: #bbb;
+    cursor: pointer;
+}
+
+.right .right-content {
+    /* overflow: auto;
+    padding: 5px; */
+    position: absolute;
+    top: 45px;
+    bottom: 0px;
+    border: 1px solid #000;
+    right: 0;
+    left: 0;
+}
+
+.wraper-footer {
+    position: fixed;
+    right: 0;
+    bottom: 0px;
+    left: 204px;
+    height: 60px;
+    background: #bbb;
+}
