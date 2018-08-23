@@ -107,8 +107,7 @@ li {
 }
 
 .right .right-content {
-    /* overflow: auto;
-    padding: 5px; */
+    overflow: auto;
     position: absolute;
     top: 45px;
     bottom: 0px;
