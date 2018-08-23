@@ -1,0 +1,101 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.box-split {
+    overflow: hidden;
+    border: 1px solid #fff;
+    padding: 20px;
+}
+
+.box-size {
+    margin-top: 10px;
+    width: 120px;
+    height: 120px;
+    border: 1px solid #bbb;
+    float: left;
+    margin-right: 10px;
+}
+
+.item {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.box-1 {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: flex-start;
+}
+
+.box-2 {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+}
+
+.box-3 {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: flex-end;
+}
+
+.box-4 {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.box-5 {
+    display: flex;
+    display: -webkit-flex;
+    /* 加不加这个样式还是有区别的 */
+    flex-direction: column;
+}
+
+.box-5 .item:nth-child(2) {
+    align-self: center;
+}
+
+.box-6 {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+}
+
+.box-6 .item:nth-child(2) {
+    align-self: flex-end;
+}
+
+.box-7 {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.box-8 {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.box-8 .item:nth-child(2){
+    align-self: center;
+}
+
+.box-9 {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.box-9 .item:nth-child(2){
+    align-self: flex-end;
+}
